@@ -6,8 +6,10 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-12.04
   - name: centos-6.4
+    driver_config:
+      forward:
+      - 80:80
 
 suites:
   - name: default
